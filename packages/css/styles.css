@@ -1248,7 +1248,7 @@ img {
       text-align: initial;
     }
     .project__bg {
-      background: none;
+      background: blue;
     }
     .project__container {
       background-color: var(--first-color-second);
