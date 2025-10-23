@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 1 | Business Performance & Insights Dashboard</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #f7f9fc, #e3e8f0);
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .story {
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    iframe {
+      display: block;
+      margin: 1.5rem auto;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      height: 70vh;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .presentation {
+      width: 100%;
+      height: 60vh;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+
+    .toggle-btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      background-color: #00509e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 60vh;
+      }
+
+      .presentation {
+        height: 50vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Project 1: Business Performance & Executive Insights</h1>
+  </header>
+
+  <div class="container">
+    <p class="story" id="story-text">
+      This project combines a Power BI performance dashboard with an executive presentation to tell a 
+      complete story of how data-driven insights inform better decisions. The analysis explores key 
+      performance indicators such as revenue growth, cost efficiency, and customer engagement across 
+      multiple business regions and time periods.
+      <br><br>
+      The Power BI dashboard provides interactive visualizations that allow decision-makers to filter 
+      by region, category, or period — instantly identifying trends and opportunities. Complementing this, 
+      the PowerPoint presentation highlights key takeaways, contextual narratives, and recommendations for 
+      business strategy and execution.
+      <br><br>
+      Together, these tools transform raw data into actionable intelligence, fostering a culture of 
+      transparency, accountability, and continuous improvement.
+    </p>
+
+    <button class="toggle-btn" onclick="toggleStory()">Hide Story</button>
+
+    <!-- Embedded Power BI Dashboard -->
+    <iframe 
+      title="Project1"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMmMzNDhiOWQtMmI1Ni00MTc0LWE1MjctMGYwMjMyMTkzNDg0IiwidCI6IjU2MzMzN2NhLWE1MTctNDIxYS1hYWUwLTFhYTViNDE0ZmQ3ZiIsImMiOjZ9"
+      allowFullScreen="true">
+    </iframe>
+
+    <!-- Embedded PowerPoint Presentation -->
+    <iframe 
+      class="presentation"
+      src="https://1drv.ms/p/c/f1352705f307642a/IQQqZAfzBSc1IIDx1moAAAAAAclOrbOX2un64Hmq5xIWyPU?em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1"
+      frameborder="0">
+      This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation,
+      powered by <a target="_blank" href="https://office.com/webapps">Office</a>.
+    </iframe>
+  </div>
+
+  <footer>
+    &copy; 2025 Leonard Francis | Data Analytics & Visualization Portfolio
+  </footer>
+
+  <script>
+    function toggleStory() {
+      const story = document.getElementById("story-text");
+      const button = document.querySelector(".toggle-btn");
+      if (story.style.display === "none") {
+        story.style.display = "block";
+        button.textContent = "Hide Story";
+      } else {
+        story.style.display = "none";
+        button.textContent = "Show Story";
+      }
+    }
+  </script>
+</body>
+</html>
